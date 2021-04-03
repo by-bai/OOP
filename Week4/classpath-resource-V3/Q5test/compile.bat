@@ -1,0 +1,1 @@
+javac -d out -cp source:lib source/demo/Tester.java

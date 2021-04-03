@@ -1,0 +1,1 @@
+javac -d out -cp "lib/*:src" src/Q7.java 
