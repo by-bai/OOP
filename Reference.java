@@ -69,3 +69,17 @@ java -cp "lib/*:classes" app.TemplatingEngine
 javac -d production -cp "source:libraries/prebuilt/*:libraries/log4j2/*:config/*" source/labtest/VendingMachineTest.java
 java -cp "config/*:libraries/prebuilt/*:libraries/log4j2/*:production" labtest.VendingMachineTest
 // ^ remember to -cp the folder where the generated class is stored in!!
+
+
+
+// integer division
+/* 1. return integer */
+return Math.round(super.getPriceInCents() * 7/9);
+
+/* 2. return double */
+int percent
+//int/int --> WRONG.
+return (100-percent)/100 * super.getPrice();
+
+//to get double:
+return (100-percent)/100.0 * super.getPrice(); 

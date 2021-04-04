@@ -1,0 +1,1 @@
+javac -d production -cp "source:libraries/prebuilt/*:libraries/log4j2/*:config/*" source/labtest/VendingMachineTest.java
