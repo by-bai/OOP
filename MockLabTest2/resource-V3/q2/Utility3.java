@@ -1,6 +1,21 @@
+import java.util.Iterator;
 
 public class Utility3 {
-
+    public static void removeDisqualifiedSMUXSections(List<Course> courses) {
+        for (Course course : courses) {
+            List<Section> sections = new ArrayList<>();
+            Iterator<Section> iter = course.iterator();
+            if (iter.hasNext()) {
+                Section section = iter.next();
+                if (section instanceof SMUXSection) {
+                    SMUXSection smux = (SMUXSection) section;
+                    if (smux.getSponsor() == null) {
+                        courses.remove(course); 
+                    }
+                }
+            }
+        }
+    }
     
 
     public static void main(String[] args) {

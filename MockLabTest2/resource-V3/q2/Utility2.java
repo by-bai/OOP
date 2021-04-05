@@ -1,6 +1,28 @@
+import java.util.*;
 
 public class Utility2 {
+    public static List<Course> retrieveLowEnrolmentCourses(List<Course> courses) {
+        List<Course> result = new ArrayList<>();
+        for (Course course : courses) {
+            List<Section> sections = new ArrayList<>();
+            
+            Iterator<Section> iter = course.iterator(); 
+            int sumSections = 0;
+            int qualifiedSections = 0; 
+            while (iter.hasNext()) {
+                sumSections += 1;
+                Section section = iter.next();
+                if (section.getEnrolmentNumber() * 2.0 < section.getCapacity()) {
+                    qualifiedSections += 1; 
+                }
+                
+            }
+            if (qualifiedSections * 3 >= sumSections) {
+                result.add(course); 
+            }
 
+        } return result; 
+    }
     
 
     public static void main(String[] args) {

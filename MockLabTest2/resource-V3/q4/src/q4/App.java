@@ -1,3 +1,5 @@
+package q4; 
+import q4.domain.*;
 
 import java.io.File;
 import java.io.FileInputStream;

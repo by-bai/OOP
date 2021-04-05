@@ -1,6 +1,49 @@
+import java.util.*;
 
 public class Utility4 {
-    
+    public static Map<String, Integer> getShortFall(List<Course> courses, Map<String,Integer> demand) {
+        //return Map<String, Integer>: key= course name, value= shortfall number for course
+        //params Map<String, Integer>: key= course name, value= no. of students requested for course
+
+        Map<String, Integer> shortfall = new HashMap<>();
+        
+        
+        if (demand == null) {
+            return null;
+        }
+
+        Set<String> keys = demand.keySet();
+        for (String key : keys) {
+            int requested = demand.get(key); 
+            boolean found = false;
+
+            for (Course course : courses) {
+                if (course.getName.equals(key)) {
+                    List<Section> sections = new ArrayList<>();
+                    Iterator<Section> iter = course.iterator();
+                    while (iter.hasNext()) {
+                        Section section = iter.next(); 
+                        int vacancies = 0;  
+                        
+                        vacancies = section.getCapacity() - section.getEnrolmentNumber();
+                    }
+                    if (vacancies < requested) {
+                        shortfall.put(course.getName(), requested-vacancies); 
+                        found = true;
+                    }
+                
+                if (!found) {
+                    shortfall.put(course.getName(), requested);
+                }
+                        
+                    
+            }
+                
+
+        } return shortfall;
+
+    }
+    }
     public static void main(String[] args) {
         {
             Course c1 = new Course("Fishing");

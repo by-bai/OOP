@@ -1,4 +1,5 @@
-
+package q4.domain;
+import q4.*; 
 public class Product {
     private String name;
     private int quantity;
