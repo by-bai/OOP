@@ -1,0 +1,8 @@
+name#Ingredient1#Ingredient2#Ingredient3#Ingredient4#CookingTime#Price
+steak#beef#beef#beef#beef#25#7.9
+burger & fries#beef#potato###15#3.1
+bak kut teh#coriander#pork#garlic##18#3.8
+caesar salad#salad#bread#egg##20#2.7
+chicken korma#chicken#coconut#chilli#onion#30#2.9
+lobster salad#lobster#tomato#coriander#salad#13#4.7
+fluff#smoke#feather###30#0.5

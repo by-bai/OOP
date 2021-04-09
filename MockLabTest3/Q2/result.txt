@@ -1,0 +1,6 @@
+pear:SISStudent:3.933333333333333
+orange:SISStudent:3.6500000000000004
+apple:SISStudent:2.72
+ricky:Student:0.0
+mary:Student:0.0
+durian:SISStudent:0.0
